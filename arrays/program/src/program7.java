@@ -2,16 +2,12 @@ import java.util.*;
 class Program7{
 	public static void main(String args[]){
 		Scanner in=new Scanner(System.in);
-		int i;
-		int array[]=new int[5];
-		int choice;
+		int i,inputVar,sum1,max,min;
+		int array[]=new int[5];		
 		int count=0;
 		int count1=0;
-		int sum=0;
-		int sum1;
-		int max;
-		int max2=array[0];
-		int min;
+		int sum=0;		
+		int max2=array[0];		
 		int frequency=0;
 		char a;
 		do{
@@ -30,8 +26,8 @@ class Program7{
 			System.out.println("7 for seeing count of even elements of array");
 			System.out.println("8 for seeing occurence of given elements of array");
 			System.out.println("Enter your choice :");
-			choice=in.nextInt();
-			switch(choice){
+			inputVar=in.nextInt();
+			switch(inputVar){
 				case (1): {
 					System.out.println("Array is:");
 					for(i=0;i<5;i++){

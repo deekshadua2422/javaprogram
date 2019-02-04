@@ -1,17 +1,17 @@
 import java.io.*;
 import java.util.*;
 class Student {
-    int sNo;
-    String fName;
+    int SerialNumber;
+    String StartName;
     float cgpa;
     char grade;
     Scanner input = new Scanner(System.in);
 
     void setStudent() {
         System.out.print("Enter Serial No : ");
-        sNo = input.nextInt();
+        SerialNumber = input.nextInt();
         System.out.print("Enter First Name : ");
-        fName = input.next();
+        StartName = input.next();
         System.out.print("Enter CGPA : ");
         cgpa = input.nextFloat();
         System.out.print("Enter grade : ");
@@ -19,12 +19,12 @@ class Student {
     }
 
     public String toString() {
-        return sNo + "\t" + fName + "\t" + cgpa + "\t" + grade + "\n"; 
+        return SerialNumber + "\t" + StartName + "\t" + cgpa + "\t" + grade + "\n"; 
     }
 
     void getStudent() {
-        System.out.print("Serial No : " + sNo);
-        System.out.print("First Name : " + fName);
+        System.out.print("Serial No : " + SerialNumber);
+        System.out.print("First Name : " + StartName);
         System.out.print("CGPA : " + cgpa);
         System.out.print("garde : " + grade);
     }
@@ -38,10 +38,10 @@ class Program1 {
             FileWriter fout = new FileWriter(f);
             BufferedWriter bout= new BufferedWriter(fout);
             Student s[] = new Student[5];
-            for (int i=0; i<5; i++) {
-                s[i] = new Student();
-                s[i].setStudent();
-                bout.write(s[i].toString());
+            for (int localnum=0; localnum<5; localnum++) {
+                s[localnum] = new Student();
+                s[localnum].setStudent();
+                bout.write(s[localnum].toString());
                 bout.newLine();
             }
             
@@ -59,11 +59,11 @@ class Program1 {
             f = new File("C:\\College\\Java_FOCPII\\FileHandling\\files\\student.txt");
             FileReader fin = new FileReader(f);
             BufferedReader bin= new BufferedReader(fin);
-            String sr;
+            String strfl;
             System.out.println("The contents of the file are: ");
             System.out.println("S.No\tName\tCGPA\tgrade");
-            while((sr=bin.readLine())!=null){
-                System.out.println(sr);
+            while((strfl=bin.readLine())!=null){
+                System.out.println(strfl);
             } 
         }
         catch (Exception e) {
@@ -78,9 +78,9 @@ class Program1 {
         try {
             boolean flag=true;
             FileReader fin = new FileReader(f);
-            String s;
+            String i;
             BufferedReader bin= new BufferedReader(fin);
-                while ((s=bin.readLine())!=null && flag) {
+                while ((i=bin.readLine())!=null && flag) {
                     if(s.equals("me")) {
                         System.out.print("Present");
                     flag=false;
@@ -95,7 +95,7 @@ class Program1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         char ch;
-        char c;
+        char str;
         do {
             ch = input.next().charAt(0);
             switch(ch) {
@@ -108,8 +108,8 @@ class Program1 {
                 default : System.out.println("INVALID");
             }
            
-            c = input.next().charAt(0);
-        } while (c=='y');
+            str = input.next().charAt(0);
+        } while (str=='y');
         
     }
 }

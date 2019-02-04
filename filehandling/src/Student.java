@@ -1,23 +1,21 @@
 import java.util.*;
 class Student{
+	int localnum,number,flagserial;
+	String Name;
 	float Cgpa;
-	int SerialNum;
 	char Grade;
-	String FirstName;
-	int number;
-	int i;
 	Student details[];
 	Scanner in = new Scanner(System.in);
  	Student(){
- 		SerialNum=1;
+ 		flagserial=1;
  		Cgpa=9.1f;
  		Grade='A';
- 		FirstName="Bharat";
+ 		Name="Deeksha";
 
  	}
- 	Student(int SerialNum,String FirstName,float Cgpa,char Grade){
- 		this.SerialNum=SerialNum;
- 		this.FirstName=FirstName;
+ 	Student(int flagserial,String Name,float Cgpa,char Grade){
+ 		this.flagserial=flagserial;
+ 		this.Name=Name;
  		this.Cgpa=Cgpa;
  		this.Grade=Grade;
  	}
@@ -25,17 +23,17 @@ class Student{
  		System.out.println("Please enter number of students");
  		number=in.nextInt();
  		Student details[] = new Student[number];
- 		for(i=0;i<details.length;i++){
+ 		for(localnum=0;localnum<details.length;localnum++){
  			System.out.println("Enter Serial number");
- 			SerialNum=in.nextInt();
- 			System.out.println("Enter FirstName");
+ 			flagserial=in.nextInt();
+ 			System.out.println("Enter Name");
  			in.nextLine();
- 			FirstName=in.nextLine();
+ 			Name=in.nextLine();
  			System.out.println("Enter CGPA");
  			Cgpa=in.nextFloat();
  			System.out.println("Enter Grade");
  			Grade=in.next().charAt(0);
- 			details[i]=new Student(SerialNum,FirstName,Cgpa,Grade);
+ 			details[localnum]=new Student(flagserial,Name,Cgpa,Grade);
  		}
  	}
 

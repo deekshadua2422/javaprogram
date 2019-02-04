@@ -10,9 +10,9 @@ class TestTime extends Exception{
 		catch(IllegalArgumentException e){
 			System.out.println(e.getMessage());
 		}
-		System.out.println(t1.nextSecond());
-		System.out.println(t1.nextMinute());
-		System.out.println(t1.nextHour());
+		System.out.println(t1.calnextSecond());
+		System.out.println(t1.calnextMinute());
+		System.out.println(t1.calnextHour());
 		System.out.println(t1.previousSecond());
 		System.out.println(t1.previousMinute());
 		System.out.println(t1.previousHour());

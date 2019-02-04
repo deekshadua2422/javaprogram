@@ -1,20 +1,31 @@
-class BoxWeight extends Box{
+class BoxWeight extends Box
+{
 	float weight;
-	Box b=new Box();
-	BoxWeight(){
-		weight=0f;
+
+	BoxWeight()
+	{
+		super();
+		weight=0;
 	}
-	BoxWeight(float weight,float width,float height,float depth){
-		super(width,height,depth);
-		this.weight=weight;
+
+	BoxWeight(float w,float h, float d,float we)
+	{
+		super(w,h,d);
+		weight=w;
 	}
-	void setWeight(){
-		this.weight=weight;
+
+	void setWeight(float we)
+	{
+		weight = we;
 	}
-	float getWeight(){
+
+	float getWeight()
+	{
 		return weight;
 	}
-	void DisplayWeight(){
-		System.out.println("Weight is :" +weight);
+
+	void display()
+	{
+		System.out.println(weight);
 	}
 }

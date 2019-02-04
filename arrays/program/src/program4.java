@@ -6,6 +6,10 @@ class Program4{//main method to sort arrays using functions
 	static int dup;
 	static int n;
 	static int num[]=new int[5];
+
+	public static void main(String args[]){
+				Array();
+			}
 	static void Array(){
 for(row=0;row<5;row++){//saving the array
 			System.out.println("Enter element[" +(row+1)+ "]:");
@@ -36,7 +40,5 @@ for(row=0;row<5;row++){//saving the array
 		}
 	}
 	
-			public static void main(String args[]){
-				Array();
-			}
+			
 		}

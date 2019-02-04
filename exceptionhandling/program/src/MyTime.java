@@ -45,7 +45,7 @@ class MyTime{
 		else
 		return (hour+":"+minute+":"+second);
 	}
-	String nextSecond(){
+	String calnextSecond(){
 		second++;
 		if(second==60){
 			minute++;
@@ -60,7 +60,7 @@ class MyTime{
 		}
 		return (hour+":"+minute+":"+second);
 	}
-	String nextMinute(){
+	String calnextMinute(){
 		minute++;
 		if(minute==60){
 			hour++;
@@ -71,7 +71,7 @@ class MyTime{
 		}
 		return (hour+":"+minute+":"+second);
 	}
-	String nextHour(){
+	String calnextHour(){
 		hour++;
 		if(hour==24){
 			hour=00;

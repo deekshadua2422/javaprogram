@@ -6,11 +6,9 @@ class Program9
 		Scanner in=new Scanner(System.in);
 		float grades[][]=new float[11][6];
 		int subjects[]=new int[10];
-		int i;
-		int j;
+		int i,j,subject;
 		float sum=0;
-		float grade;
-		int subject;
+		float gradeMarks;
 		float avg=0;
 		float total=0;
 		for(i=0;i<10;i++)
@@ -21,8 +19,8 @@ class Program9
 		for(j=0;j<subject;j++)
 		{
 			System.out.println("Enter grade for subject "+(j+1)+" :");
-			grade=in.nextFloat();
-			grades[i][subject-1]=grades[i][subject-1]+grade;
+			gradeMarks=in.nextFloat();
+			grades[i][subject-1]=grades[i][subject-1]+gradeMarks;
 		}
 	}
 	System.out.print("Sub1\t\t Sub2 \t\t Sub3\t\t Sub4\t\t Sub5\t\t Student Average");

@@ -1,36 +1,53 @@
-class Box{
-	float width;
-	float height;
-	float depth;
-	Box(){
-		width=0f;
-		height=0f;
-		depth=0f;
+class Box
+{
+	float width,height,depth;
+
+	Box()
+	{
+		width =0;
+		height=0;
+		depth=0;
 	}
-	Box(float width,float height,float depth){
-		this.width=width;
-		this.height=height;
-		this.depth=depth;
+
+	Box(float w,float h, float d)
+	{
+		width=w;
+		height=h;
+		depth=d;
 	}
-	void setWidth(){
-		this.width=width;
+
+	void setWidth(float w)
+	{
+		width = w;
 	}
-	float getWidth(){
+
+	void setDepth(float d)
+	{
+		depth = d;
+	}
+
+	void setHeight(float h)
+	{
+		height = h;
+	}
+
+	float getWidth()
+	{
 		return width;
 	}
-	void setDepth(){
-		this.depth=depth;
-	}
-	float getDepth(){
-		return depth;
-	}
-	void setHeight(){
-		this.height=height;
-	}
-	float getHeight(){
+
+	float getHeight()
+	{
 		return height;
 	}
-	void DisplayVolume(){
-		System.out.println("Volume is :" +(depth*height*width));
+
+	float getDepth()
+	{
+		return depth;
+	}
+
+	void display()
+	{
+		System.out.println((width*depth*height));
 	}
 }

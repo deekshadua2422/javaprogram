@@ -1,15 +1,12 @@
 import java.util.*;
 class Program8
 {
-	public static void main(String args[])//main method to display total sales and total product sale
+	public static void main(String args[])//main method to display total  and total product sale
 	{
 		Scanner in = new Scanner(System.in);
 		float array[][]=new float[4][5];
-		int i;
-		int j;
-		int sp;
-		float sales=0f;
-		int product;
+		int i,j,sp,product;
+		float salesVar=0f;
 		float value;
 		float Product_sales=0f;
 		System.out.println("\n");
@@ -27,10 +24,10 @@ class Program8
 			for(j=0;j<5;j++)
 			{
 				System.out.print(+array[i][j]+ "\t\t\t");
-				sales=sales+array[i][j];
+				salesVar=salesVar+array[i][j];
 			}
-			System.out.println(sales);
-			sales=0;
+			System.out.println(salesVar);
+			salesVar=0;
 		}
 		System.out.println("Product sales are:");
 		for(j=0;j<5;j++)
